@@ -16,7 +16,13 @@ NUM_INCREASES = 0
 
 # List comprehension
 # https://www.w3schools.com/python/python_lists_comprehension.asp
-tuples = [tuple(values[index: index + 3]) for index in range(0, len(values), 1)]
+
+# range(a, b, c) function creates a sequence of numbers from a to b in steps of
+# c (default step is 1)
+
+# [index: index + 3] must be index safe as does not throw 'out of bounds' error when
+# index = n-2, n-1 or n
+tuples = [tuple(values[index: index + 3]) for index in range(0, len(values))]
 
 for index, val in enumerate(tuples[1:]):
     if sum(list(val)) > sum(list(tuples[index])):
