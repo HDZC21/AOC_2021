@@ -1,8 +1,5 @@
 """AOC 2021 Day 4"""
 
-from os import replace
-
-
 input_values = [n.rstrip('\n') for n in open('C:/Data/GitHub/AOC_2021/Day_4/sample_input.txt', 'r')]
 
 moves = input_values[0].split(',')
